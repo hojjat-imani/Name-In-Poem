@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ActivityMain">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        >
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/toolbar"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/gray_D"
+            android:layout_centerInParent="true"
+            android:id="@+id/search_layout_background"
+            />
+
+        <com.gc.materialdesign.views.Card
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/space_low"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_medium"
+                android:paddingRight="@dimen/space_medium"
+                android:paddingTop="@dimen/space_low"
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/dummyViewJustToGetTheFocusFromSearchField"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/nameSearchField"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="نام خود را وارد کنید"
+                    android:textColor="@color/text_dark"
+                    android:minHeight="0dp"
+                    android:textColorHint="@color/text_light" />
+
+                <ImageButton
+                    android:id="@+id/search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@android:drawable/ic_menu_search" />
+
+            </LinearLayout>
+
+
+        </com.gc.materialdesign.views.Card>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/search_layout">
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/allPoemsBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/primary"
+            android:text="Button">
+
+        </com.gc.materialdesign.views.ButtonFlat>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/suggest_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_D2"
+            android:layout_alignParentTop="true"
+            android:id="@+id/line"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_E"
+            android:layout_below="@+id/line">
+
+
+        <com.gc.materialdesign.views.Card
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_low"
+            android:minHeight="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/space_low"
+                android:paddingBottom="@dimen/space_low"
+                android:paddingRight="@dimen/space_medium"
+                android:paddingLeft="@dimen/space_medium">
+
+                <ListView
+                    android:id="@+id/suggest_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/divider_gray"
+                    android:dividerHeight="1dp"
+                    />
+
+                <com.gc.materialdesign.views.ButtonFlat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Button"
+                    android:layout_gravity="center"
+                    android:background="@color/primary"
+                    android:id="@+id/cant_find_my_name"
+                    />
+                </LinearLayout>
+
+        </com.gc.materialdesign.views.Card>
+        </FrameLayout>
+    </RelativeLayout>
+    </RelativeLayout>

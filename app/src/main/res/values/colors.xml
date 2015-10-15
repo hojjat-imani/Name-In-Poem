@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#009688</color>
+    <color name="primaryDark">#004D40</color>
+    <color name="accent">#1DE9B6</color>
+    <color name="controlNormal">#FFFFFF</color>
+    <!--<color name="controlNormal">#9E9E9E</color>-->
+    <color name="controlActivated">@color/accent</color>
+    <color name="controlHighlight">@color/accent</color>
+
+    <color name="divider_gray">#E1E1E1</color>
+    <color name="text_light">#888888</color>
+    <color name="text_dark">#252525</color>
+
+    <color name="gray_D">#DDDDDD</color>
+    <color name="gray_E">#EEEEEE</color>
+    <color name="gray_D2">#D2D2D2</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="windowBackground">@color/gray_E</color>
+
+    <color name="insta_dark_gray">#25292C</color>
+    <color name="insta_xdark_gray">#16181A</color>
+    <color name="insta_light_gray">#4A5158</color>
+    <color name="insta_buttons_blue">#4D9AD8</color>
+</resources>
